@@ -28,7 +28,7 @@ const WelcomeText: React.FC = () => {
         </h1>
         {!isShrunk && (
           <Image
-            src="/presentation.gif"
+            src="/my-portafolio/presentation.gif"
             alt="Sticker animado"
             width={100}
             height={100}
@@ -39,7 +39,7 @@ const WelcomeText: React.FC = () => {
         {isShrunk && (
           <div className="mt-4">
             <Button
-              href="/files/my-resume.pdf"
+              href="/my-portafolio/GinaGalleguillos.pdf"
               download
             >
               Descarga mi CV
@@ -50,7 +50,7 @@ const WelcomeText: React.FC = () => {
       {isShrunk && (
         <div className="relative w-1/3 h-[33rem] overflow-hidden">
           <Image
-            src="/my-self.png"
+            src="/my-portafolio/my-self.png"
             alt="Mi foto"
             width={100}
             height={100}
