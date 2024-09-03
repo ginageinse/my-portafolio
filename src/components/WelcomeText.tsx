@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Button from '../components/Button';
+import Image from 'next/image';
 
 const WelcomeText: React.FC = () => {
   const [isShrunk, setIsShrunk] = useState(false);
@@ -26,9 +27,12 @@ const WelcomeText: React.FC = () => {
           {isShrunk ? 'Gina Galleguillos' : 'Bienvenido a mi portafolio frontend'}
         </h1>
         {!isShrunk && (
-          <img
+          <Image
             src="/presentation.gif"
             alt="Sticker animado"
+            width={100}
+            height={100}
+            unoptimized
             className="absolute mt-36 top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[15rem] h-[15rem]"
           />
         )}
@@ -45,9 +49,12 @@ const WelcomeText: React.FC = () => {
       </div>
       {isShrunk && (
         <div className="relative w-1/3 h-[33rem] overflow-hidden">
-          <img
+          <Image
             src="/my-self.png"
             alt="Mi foto"
+            width={100}
+            height={100}
+            unoptimized={true}
             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-auto w-full object-cover"
           />
         </div>
